@@ -1,0 +1,21 @@
+# Server Configuration
+server:
+  port: 8082  # Change this to your desired port number
+
+# H2 Database Configuration
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+# Hibernate Configuration
+  jpa:
+    hibernate:
+      ddl-auto: update  # Options: none, update, create, create-drop
+    show-sql: true
